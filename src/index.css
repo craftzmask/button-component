@@ -11,4 +11,5 @@ html, body {
 #root {
   display: flex;
   height: 100vh;
+  max-width: 100%;
 }

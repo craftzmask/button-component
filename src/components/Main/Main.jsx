@@ -78,6 +78,8 @@ export default function Main(props) {
         ))}
       </div>
       
+      <p class="source">Icons: https://material.io/resources/icons/?style=round</p>
+
       <Footer />
     </main>
   );

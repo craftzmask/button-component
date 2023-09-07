@@ -1,8 +1,9 @@
 main {
   display: flex;
   flex-direction: column;
-  row-gap: 1.7em;
+  row-gap: 2.5em;
   padding: 2.5em 3em 1em 3em;
+  max-width: 100%;
 }
 
 h1 {
@@ -37,7 +38,7 @@ span.material-symbols-outlined  {
 }
 
 .last {
-  row-gap: 1.5em;
+  row-gap: 2em;
 }
 
 .title {
@@ -45,4 +46,11 @@ span.material-symbols-outlined  {
   font-family: 'Ubuntu Mono';
   font-size: 12px;
   font-weight: 400;
+}
+
+.source {
+  margin-top: 2em;
+  font-size: 12px;
+  color: #828282;
+  font-family: 'Ubuntu Mono';
 }
