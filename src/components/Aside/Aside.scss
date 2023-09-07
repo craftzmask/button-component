@@ -1,0 +1,37 @@
+aside {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8em;
+  padding: 2em 3em;
+  padding-right: 4.5em;
+  background-color: #FAFBFD;
+}
+
+div {
+  color: #9E9E9E;
+  font-family: 'Noto Sans JP';
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5em;
+}
+
+.focus {
+  color: #090F31;
+}
+
+.brand {
+  color: #090F31;
+}
+
+.dev {
+  color: #F7542E;
+}
+
+.link:hover {
+  cursor: pointer;
+}

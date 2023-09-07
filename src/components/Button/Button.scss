@@ -1,0 +1,109 @@
+$primary: #2962FF;
+$primaryDarker: #0039CB;
+
+$secondary: #455A64;
+$secondaryDarker: #1C313A;
+
+$danger: #D32F2F;
+$dangerDarker: #9A0007;
+
+$default: #E0E0E0;
+$white: white;
+
+$outline: #3D5AFE;
+$outlineLigher: rgba(41, 98, 255, 0.1);
+
+$defaultPadding: 8px 16px;
+$smallPadding: 6px 10px;
+$largePadding: 12px 20px;
+
+button {
+  display: flex;
+  column-gap: 0.3em;
+  font-size: 14px;
+  background-color: $default;
+  color: #3F3F3F;
+  border: 1px solid $default;
+  border-radius: 5px;
+  padding: $defaultPadding;
+  box-shadow: 0px 2px 3px 0px #33333333;
+}
+
+button:hover, button:focus, .default-focus {
+  background-color: #AEAEAE;
+  cursor: pointer;
+}
+
+button:disabled {
+  color: #9E9E9E;
+  background-color: $default;
+  border-color: $default; 
+}
+
+
+@mixin theme($borderColor: white, $bgColor: white, $color: white) {
+  color: $color;
+  background-color: $bgColor;
+  border-color: $borderColor;
+}
+
+.primary {
+  @include theme($borderColor: $primary, $bgColor: $primary);
+}
+
+.primary:hover, .primary:focus, .primary-focus {
+  @include theme($borderColor: $primaryDarker, $bgColor: $primaryDarker);
+}
+
+.secondary {
+  @include theme($borderColor: $secondary, $bgColor: $secondary);
+}
+
+.secondary:hover, .secondary:focus, .secondary-focus {
+  @include theme($borderColor: $secondaryDarker, $bgColor: $secondaryDarker);
+}
+
+.danger {
+  @include theme($borderColor: $danger, $bgColor: $danger);
+}
+
+.danger:hover, .danger:focus, .danger-focus {
+  @include theme($borderColor: $dangerDarker, $bgColor: $dangerDarker);
+}
+
+.outline {
+  @include theme($borderColor: $outline, $color: $outline);
+  box-shadow: none;
+}
+
+.outline:hover, .outline:focus, .outline-focus {
+  @include theme($borderColor: $outline, $bgColor: $outlineLigher, $color: $outline);
+}
+
+.text {
+  @include theme($color: $outline);
+  padding: 0;
+  box-shadow: none;
+}
+
+.text:hover, .text:focus, .text-focus {
+  @include theme($borderColor: $outlineLigher, $bgColor: $outlineLigher, $color: $outline);
+  padding: $defaultPadding;
+}
+
+.text:disabled {
+  @include theme($color: #9E9E9E);
+  padding: 0;
+}
+
+.disableShadow {
+  box-shadow: none;
+}
+
+.sm {
+  padding: $smallPadding;
+}
+
+.lg {
+  padding: $largePadding;
+}
